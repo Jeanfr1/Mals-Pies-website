@@ -1,0 +1,29 @@
+{
+  "technique": "2.5D photographic composition; no live filming or 3D food simulation",
+  "web": {
+    "intro_seconds": 1.8,
+    "cleanup_seconds": 2.05,
+    "desktop_runway_svh": 174,
+    "mobile_runway_svh": 148,
+    "food_max_scale": 1.23,
+    "food_max_rotation_degrees": -1.4,
+    "food_max_translation_y_px": 28,
+    "title_exit_progress": [0.38, 0.82],
+    "macro_handoff_progress": [0.72, 1.0],
+    "pointer_translation_max_px": [9, 6],
+    "reduced_motion": "static composition; no sticky runway; no parallax; no intro",
+    "movie_downloaded_by_site": false
+  },
+  "presentation_film": {
+    "filename": "hero-movement-HD.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "duration_seconds": 10,
+    "audio": false,
+    "shots_seconds": [2.5, 6.0, 3.0],
+    "transitions_seconds": 0.75,
+    "transition_offsets_seconds": [1.75, 7.0],
+    "sequence": ["macro pull-back", "layered hero composition", "macro with THE INSIDE STORY"]
+  }
+}

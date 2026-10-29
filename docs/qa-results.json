@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "scope": "structural and integrity checks, not browser QA",
+  "checks": [
+    "approved model 2 and selected-reference hashes",
+    "five scenes, single red menu, en-AU, local links and ARIA targets",
+    "inline SVG XML, CSS asset references, JSON and WOFF signatures",
+    "21 images decode; transparent logo and foreground; identical logo copies",
+    "asset origin hashes; all supplied originals preserved",
+    "JavaScript syntax and menu data binding; 18 pies and 8 savoury options",
+    "film is 1920x1080, 24 fps, 10 seconds, no audio"
+  ],
+  "logo": {
+    "mode": "RGBA",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "alpha_range": [
+      0,
+      255
+    ],
+    "fully_transparent_percent": 62.976,
+    "high_opacity_percent": 28.274,
+    "visible_black_pixels": 0
+  },
+  "film": {
+    "file": "animation/hero-movement-HD.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "seconds": 10.0,
+    "audio": false
+  },
+  "browser_qa": {
+    "status": "UNVERIFIED",
+    "reason": "sites-previewd mailbox unavailable at /tmp/sites-previewd/requests; start and status returned os error 2"
+  },
+  "not_performed": [
+    "browser rendering and interactive QA",
+    "performance measurements",
+    "deployment"
+  ],
+  "package_checksums": "MANIFEST.sha256 is generated after this report and verified separately before packaging."
+}

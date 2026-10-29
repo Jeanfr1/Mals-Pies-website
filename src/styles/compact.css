@@ -1,0 +1,122 @@
+/* Phones, tablets in portrait and narrow windows (roteiro 01, "Mobile"): same
+   scenes and copy, stacked for legibility. The board layout lives in board.css. */
+@media not all and (min-width: 1000px) and (min-aspect-ratio: 5/4) {
+  :root { --gutter: clamp(20px, 5vw, 40px); }
+  .frame { position: relative; height: 100%; }
+  .nav { display: none; }
+
+  /* 1 · hero */
+  .hero { position: relative; height: 100svh; min-height: 620px; }
+  .hero-stage { position: relative; height: 100svh; min-height: 620px; overflow: clip; background: var(--paper); }
+  .hero-paper { position: absolute; inset: 0; }
+  .hero-paper img { width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 30% 40%; }
+  .hero-frame { position: absolute; inset: 0; }
+  .site-header { position: absolute; z-index: 10; top: calc(12px + env(safe-area-inset-top)); left: var(--gutter); right: var(--gutter); display: flex; justify-content: center; }
+  .brand { display: block; width: clamp(80px, 22vw, 116px); }
+  .brand img { width: 100%; height: auto; }
+  .mobile-nav { position: absolute; right: 0; top: 4px; font: 600 18px/1 var(--label); text-transform: uppercase; letter-spacing: .06em; }
+  .mobile-nav summary { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 2px; list-style: none; cursor: pointer; }
+  .mobile-nav summary::-webkit-details-marker { display: none; }
+  .mobile-nav-icon { position: relative; width: 18px; height: 2px; background: currentColor; }
+  .mobile-nav-icon::before { content: ''; position: absolute; inset: 0; background: currentColor; rotate: 90deg; transition: rotate .25s var(--ease-out); }
+  .mobile-nav[open] summary { color: var(--red); }
+  .mobile-nav[open] .mobile-nav-icon::before { rotate: 0deg; }
+  .mobile-nav nav { position: absolute; right: 0; top: 52px; width: min(260px, calc(100vw - 2 * var(--gutter))); display: flex; flex-direction: column; padding: 14px 22px; background: var(--cream); box-shadow: 0 14px 40px rgba(21, 19, 17, .18); }
+  .mobile-nav nav a { display: flex; align-items: center; min-height: 46px; border-bottom: 1px solid rgba(21, 19, 17, .1); }
+  .mobile-nav nav a:last-child { border-bottom: 0; }
+
+  /* Title behind the product, copy in front of it (roteiro 01, mobile). */
+  .hero-left { position: absolute; inset: 0; pointer-events: none; }
+  .hero-title { position: absolute; z-index: 3; left: var(--gutter); top: calc(clamp(96px, 12.5svh, 140px) + env(safe-area-inset-top)); color: var(--red); font: 400 min(28vw, 18svh)/.88 var(--display); }
+  .hero-line { display: block; }
+  .line-in { display: block; scale: .9 1; transform-origin: 0 50%; }
+  .hero-copy { position: absolute; z-index: 5; left: var(--gutter); bottom: calc(26px + env(safe-area-inset-bottom)); pointer-events: auto; padding: 10px 14px 12px 0; }
+  .hero-copy::before { content: ''; position: absolute; inset: -18px -40px -26px calc(-1 * var(--gutter)); background: radial-gradient(ellipse at 20% 60%, rgba(241, 236, 229, .92), rgba(241, 236, 229, .6) 48%, transparent 72%); z-index: -1; }
+  .hero-sub { font: 700 clamp(19px, 5.2vw, 26px)/1.05 var(--serif); letter-spacing: -.02em; margin-bottom: 12px; }
+  .hero-sub span { display: block; }
+  .hero-cta { color: var(--red); font-size: clamp(17px, 4.6vw, 21px); letter-spacing: .06em; min-height: 40px; }
+  .hero-cta .icon { width: .7em; height: .7em; }
+
+  .hero-right { position: absolute; z-index: 4; width: min(96vw, 60svh, 600px); aspect-ratio: 1214 / 1295; right: -16vw; bottom: calc(clamp(118px, 15.6svh, 170px) + env(safe-area-inset-bottom)); pointer-events: none; }
+  .hero-food { position: absolute; inset: 0; transform-origin: 40% 46%; }
+  .hero-food img { width: 100%; height: 100%; max-width: none; }
+  .callout { position: absolute; z-index: 2; font: 600 clamp(14px, 3.6vw, 17px)/1 var(--label); text-transform: uppercase; letter-spacing: .04em; color: var(--ink); white-space: nowrap; text-shadow: 0 0 6px rgba(255, 247, 237, .95), 0 0 2px rgba(255, 247, 237, .9); }
+  .leader { position: absolute; overflow: visible; fill: var(--ink); stroke: var(--ink); }
+  .leader path { fill: none; stroke-width: 1.4; }
+  .callout-flaky { display: none; }
+  .callout-steak { left: 4%; top: 64%; }
+  .callout-steak .leader { width: 2.2em; height: 3.4em; left: 3.2em; top: -3.55em; }
+  .hero-crumbs { position: absolute; left: -4%; top: 14.5%; width: 42%; height: auto; max-width: none; }
+  .intro-macro { position: absolute; inset: 0; z-index: 8; opacity: 0; pointer-events: none; }
+  .intro-macro img { width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 62% 60%; }
+
+  /* 2 · the inside story */
+  .inside, .inside-ghost { --h2: clamp(420px, 56svh, 720px); height: var(--h2); overflow: clip; color: var(--cream); background: #2b1c12; }
+  .inside { position: relative; }
+  .inside-photo img { object-position: 60% 55%; }
+  .inside-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(21, 19, 17, .48), transparent 52%), linear-gradient(0deg, rgba(21, 19, 17, .55), transparent 34%); }
+  .inside-title { position: absolute; left: var(--gutter); top: clamp(26px, 5svh, 52px); font: 400 min(19vw, 15svh)/.92 var(--display); }
+  .inside-title .line { display: block; overflow: clip; overflow-clip-margin: .06em; }
+  .inside-title .line-in { scale: .86 1; }
+  .inside-caption { position: absolute; right: var(--gutter); bottom: 24px; max-width: 72%; text-align: right; font: 700 clamp(18px, 4.8vw, 24px)/1.15 var(--serif); text-shadow: 0 1px 12px rgba(21, 19, 17, .6); }
+
+  /* 3 · the range */
+  .range { position: relative; overflow: clip; background: var(--red); color: var(--cream); padding: 30px var(--gutter) 34px; }
+  .range-seal { position: absolute; width: min(118vw, 680px); right: -52vw; top: 20%; rotate: 4deg; pointer-events: none; }
+  .range-seal img { width: 100%; height: auto; filter: brightness(0) invert(1); opacity: .11; }
+  .range-eyebrow { position: relative; font: 600 14px/1 var(--label); letter-spacing: .34em; }
+  .range-list { position: relative; margin: 34px 0 30px; display: flex; flex-direction: column; gap: 6px; }
+  .range-item { display: flex; align-items: center; gap: 12px; rotate: -7deg; transform-origin: 0 50%; }
+  .range-item[data-item='rolls'] { margin-left: 7%; }
+  .range-item[data-item='sandwiches'] { margin-left: 4%; }
+  .range-item[data-item='sweets'] { margin-left: 10%; }
+  .range-word { display: block; font: 400 clamp(54px, 15vw, 104px)/.98 var(--display); color: var(--cream); overflow: clip; overflow-clip-margin: .08em; white-space: nowrap; }
+  .range-item[data-item='sandwiches'] .range-word { font-size: clamp(46px, 12.6vw, 92px); }
+  .range-item[data-item='sweets'] .range-word { font-size: clamp(40px, 11vw, 84px); }
+  .range-word .word-in { display: block; scale: .9 1; transform-origin: 0 50%; }
+  .range-note { display: flex; align-items: flex-start; gap: 6px; font: 600 clamp(13px, 3.4vw, 17px)/.95 var(--label); text-transform: uppercase; color: var(--ink); white-space: nowrap; }
+  .range-note .icon { width: .9em; height: .7em; margin-top: .1em; }
+  .range-explore { position: relative; color: var(--cream); font-size: 18px; letter-spacing: .06em; min-height: 40px; }
+  .range-explore .icon { width: .7em; height: .7em; }
+  .range-noscript { margin-top: 16px; font: 600 16px var(--label); }
+
+  /* 4 · sweet */
+  .sweets { position: relative; height: clamp(500px, 72svh, 820px); overflow: clip; color: var(--cream); background: #3a2414; }
+  .sweets-photo img { object-position: 50% 50%; }
+  .sweets-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(21, 19, 17, .35), transparent 40%), linear-gradient(0deg, rgba(21, 19, 17, .62), transparent 50%); }
+  .sweets-title { position: absolute; left: calc(var(--gutter) - .02em); top: 18px; color: var(--red); font: 400 min(36vw, 24svh)/1 var(--display); letter-spacing: -.01em; }
+  .sweets-title span { display: inline-block; }
+  .sweets-copy { position: absolute; left: var(--gutter); bottom: 30px; font: 700 clamp(40px, 11vw, 64px)/.86 var(--serif); letter-spacing: -.035em; }
+  .sweets-line { display: block; }
+  .sweets-arrow { position: absolute; right: var(--gutter); bottom: 26px; width: 56px; height: 48px; display: grid; place-items: center; color: var(--cream); }
+  .sweets-arrow .icon { width: 40px; height: 32px; }
+
+  /* 5 · find us */
+  .visit { --shop-h: clamp(300px, 46svh, 560px); --truck-h: clamp(360px, 58svh, 700px); position: relative; background: var(--bar); color: var(--cream); }
+  .visit-photos { position: relative; }
+  .visit-panel { position: relative; overflow: clip; }
+  .visit-shop { height: var(--shop-h); }
+  .visit-truck { height: var(--truck-h); }
+  .visit-shop img { object-position: 30% 30%; }
+  .visit-truck img { object-position: 40% 40%; }
+  .visit-seam { display: none; }
+  .visit-shade { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(21, 19, 17, .72), transparent 55%); }
+  .visit-frame { position: absolute; left: 0; right: 0; top: 0; height: calc(var(--shop-h) + var(--truck-h)); pointer-events: none; }
+  .visit-title { position: absolute; font: 400 min(13.5vw, 9svh)/.92 var(--display); }
+  .visit-title .line { display: block; overflow: clip; overflow-clip-margin: .06em; }
+  .visit-title-shop { left: var(--gutter); top: calc(var(--shop-h) - 22px); translate: 0 -100%; }
+  .visit-title-truck { right: var(--gutter); bottom: 22px; font-size: min(11vw, 7.5svh); text-align: right; }
+  .contact-bar { position: relative; padding: 22px var(--gutter) 26px; }
+  .contact-frame { display: grid; grid-template-columns: 1fr; gap: 6px; }
+  .contact-address a, .contact-phone { display: flex; align-items: center; gap: 12px; min-height: 46px; font: 600 19px/1.15 var(--label); letter-spacing: .02em; }
+  .icon-pin, .icon-phone { width: 20px; height: 20px; color: var(--red); }
+  .contact-directions, .contact-truck { justify-self: start; color: var(--red-on-dark); font-size: 18px; letter-spacing: .05em; min-height: 44px; margin-top: 4px; }
+  .contact-directions .icon, .contact-truck .icon { width: .7em; height: .7em; }
+  .contact-divider { display: none; }
+}
+
+@media not all and (min-width: 1000px) and (min-aspect-ratio: 5/4) {
+  @media (min-width: 640px) {
+    .contact-frame { grid-template-columns: auto auto; align-items: center; column-gap: 32px; }
+  }
+}

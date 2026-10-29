@@ -1,0 +1,44 @@
+{
+  "company": "Mals Pies & Pastries, Townsville",
+  "selected_model": 2,
+  "selected_name": "The First Bite",
+  "selection_source": "references/escolha-do-cliente.png",
+  "selection_sha256": "f5246899e758e1a8f5d1be99579913f842634e1de1e2e1bdc748bcfb00265f97",
+  "selected_hero": "HOT. FLAKY. LOCAL.",
+  "colour_tokens": {
+    "red": "#D81920",
+    "ink": "#151311",
+    "cream": "#FFF7ED"
+  },
+  "public_language": "en-AU",
+  "main_scene_ids": [
+    "start",
+    "the-good-stuff",
+    "the-range",
+    "sweet-treats",
+    "find-us"
+  ],
+  "main_background_sequence": [
+    "photographic",
+    "photographic",
+    "solid",
+    "photographic",
+    "photographic"
+  ],
+  "single_solid_scene": "the-range",
+  "sweets_photo": "site/assets/doces-custard-original.png",
+  "finale": [
+    "real facade photo",
+    "real Smoko Truck photo"
+  ],
+  "logo": "brand/Logo-Mals-Bakery-Transparente.png",
+  "logo_sha256": "571a6e9d5b480ffd8bcee72eb32c079f23e36f2ccacb0d041020cf00e11cb0da",
+  "prohibited_changes": [
+    "Mix in model1 hero, coffee, or SMOKO SORTED headline",
+    "Mix in model3 overhead shared hero",
+    "Replace custard sweets photo by caramel tarts background",
+    "Add main solid-colour scenes",
+    "Change brand to yellow/green/pastel",
+    "Replace documentary business photos with synthetic premises"
+  ]
+}

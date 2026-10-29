@@ -1,0 +1,45 @@
+/* Motion states. Only src/js/motion.js adds .motion-on (after checking reduced
+   motion, Save-Data, the visitor's pause and ?static), so without JS, or with
+   motion off, every scene is a static, readable page. */
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.motion-paused) { scroll-behavior: smooth; }
+}
+
+.food-move { position: absolute; inset: 0; }
+.food-move img { position: relative; }
+@media (min-width: 1000px) and (min-aspect-ratio: 5/4) {
+  .food-move { position: relative; inset: auto; }
+}
+
+.motion-on .hero { --travel: 120svh; height: calc(100svh + var(--travel)); }
+.motion-on .hero-stage { position: sticky; top: 0; }
+.inside-ghost { display: none; }
+/* Dock and swap: a copy of scene 2 opens inside the pinned stage (iris from the
+   pie's filling); the real scene rises into the same slot, hidden, and takes
+   over once it is there. */
+.motion-on .inside-ghost { display: block; position: absolute; left: 0; right: 0; bottom: 0; z-index: 7; clip-path: circle(0 at 50% 0); pointer-events: none; }
+.motion-on .inside { margin-top: calc(-1 * var(--h2)); z-index: 5; visibility: hidden; }
+.motion-on .food-move { transform-origin: 36% 47%; will-change: transform; }
+.motion-on .inside-photo, .motion-on .sweets-photo { inset: -9% 0; }
+@media not all and (min-width: 1000px) and (min-aspect-ratio: 5/4) {
+  .motion-on .hero { --travel: 110svh; height: calc(max(100svh, 620px) + var(--travel)); }
+}
+
+/* Opening (roteiro 02): macro pulls back, the pie arrives, the words settle. */
+.is-entering .intro-macro { animation: macro-out 1.8s cubic-bezier(.2, .65, .3, 1) both; }
+.is-entering .intro-macro img { animation: macro-pull 1.8s cubic-bezier(.2, .65, .3, 1) both; }
+.is-entering .food-move img { animation: food-arrive 1.45s .35s cubic-bezier(.16, .75, .25, 1) both; }
+.is-entering .hero-line { overflow: clip; overflow-clip-margin: .08em; }
+.is-entering .hero-line .line-in { animation: line-rise 1.1s .55s cubic-bezier(.16, .8, .25, 1) both; }
+.is-entering .hero-line:nth-child(2) .line-in { animation-delay: .63s; }
+.is-entering .hero-line:nth-child(3) .line-in { animation-delay: .71s; }
+.is-entering .hero-sub, .is-entering .hero-cta, .is-entering .callout span, .is-entering .site-header { animation: fade-in .8s 1s ease both; }
+.is-entering .site-header { animation-delay: .5s; }
+.is-entering .leader path { stroke-dasharray: 1; animation: draw 0.6s 1.15s cubic-bezier(.3, .6, .3, 1) both; }
+.is-entering .leader circle { animation: fade-in .3s 1.1s ease both; }
+@keyframes macro-out { 0%, 19% { opacity: 1; clip-path: inset(0 0 0 0); } 70% { opacity: 1; clip-path: inset(0 0 0 100%); } 100% { opacity: 0; clip-path: inset(0 0 0 100%); } }
+@keyframes macro-pull { from { transform: scale(1.28); } to { transform: scale(1.04); } }
+@keyframes food-arrive { from { opacity: .35; transform: translate(12%, 7%) rotate(2deg) scale(1.055); } to { opacity: 1; transform: none; } }
+@keyframes line-rise { from { transform: translateY(104%); } to { transform: none; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }

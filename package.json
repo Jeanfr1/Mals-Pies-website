@@ -1,0 +1,19 @@
+{
+  "name": "mals-pies-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Mal's Pies & Pastries, Oonoonba, Townsville: one-page site built from the approved Model 2 board (The First Bite).",
+  "scripts": {
+    "dev": "vite --port 4396 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --port 4397 --strictPort",
+    "images": "python3 scripts/clean-captures.py && python3 scripts/prepare-images.py",
+    "qa": "node scripts/qa.mjs",
+    "compare": "node scripts/board-compare.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.48.2",
+    "vite": "6.4.5"
+  }
+}

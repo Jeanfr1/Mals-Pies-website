@@ -1,0 +1,156 @@
+{
+  "assets": [
+    {
+      "file": "images/originals/instagram-informacoes.png",
+      "kind": "client_original",
+      "source_attachment": "Screenshot 2026-10-25 at 15.34.12.png",
+      "sha256": "59710c62d8cfe0cac0313dee64d2c7747c876557cb34bf4f48e89644eee6c2b8",
+      "original_attachment_sha256": "59710c62d8cfe0cac0313dee64d2c7747c876557cb34bf4f48e89644eee6c2b8",
+      "dimensions": [
+        2048,
+        1339
+      ]
+    },
+    {
+      "file": "images/originals/campanha-produtos-original.png",
+      "kind": "client_original",
+      "source_attachment": "Screenshot 2026-10-25 at 15.34.20.png",
+      "sha256": "cc870a39126cffd1fd914e9357cef29b3ce35a40e1ff648b9ed150758cbffd0a",
+      "original_attachment_sha256": "cc870a39126cffd1fd914e9357cef29b3ce35a40e1ff648b9ed150758cbffd0a",
+      "dimensions": [
+        1808,
+        1822
+      ]
+    },
+    {
+      "file": "site/assets/doces-custard-original.png",
+      "kind": "client_original",
+      "source_attachment": "Screenshot 2026-10-25 at 15.34.57.png",
+      "sha256": "f1bb5e61ada73e9ad802063ad11047670a93e63184069cec0b6605ffa3c53231",
+      "original_attachment_sha256": "f1bb5e61ada73e9ad802063ad11047670a93e63184069cec0b6605ffa3c53231",
+      "dimensions": [
+        1702,
+        1814
+      ]
+    },
+    {
+      "file": "site/assets/smoko-truck-original.png",
+      "kind": "client_original",
+      "source_attachment": "Screenshot 2026-10-25 at 15.35.11.png",
+      "sha256": "7faded72f82cf2481a1bfa2e70067fc8de3c0d25b1a4ad27d1daaa9149c493dc",
+      "original_attachment_sha256": "7faded72f82cf2481a1bfa2e70067fc8de3c0d25b1a4ad27d1daaa9149c493dc",
+      "dimensions": [
+        1466,
+        1532
+      ]
+    },
+    {
+      "file": "images/originals/caramel-tarts-original.png",
+      "kind": "client_original",
+      "source_attachment": "Screenshot 2026-10-25 at 15.35.24.png",
+      "sha256": "cc18ba066d3a75e0e2dd1694e730a0f1d54885f50d442e1fb104e05daf20982d",
+      "original_attachment_sha256": "cc18ba066d3a75e0e2dd1694e730a0f1d54885f50d442e1fb104e05daf20982d",
+      "dimensions": [
+        1524,
+        1722
+      ]
+    },
+    {
+      "file": "site/assets/fachada-original.png",
+      "kind": "client_original",
+      "source_attachment": "Screenshot 2026-10-25 at 15.35.58.png",
+      "sha256": "9e3a1ace13133e04b675937f93df4e3881665aa810f19312e7a5ea95518d5221",
+      "original_attachment_sha256": "9e3a1ace13133e04b675937f93df4e3881665aa810f19312e7a5ea95518d5221",
+      "dimensions": [
+        1348,
+        998
+      ]
+    },
+    {
+      "file": "images/originals/menu-vitrine-original.png",
+      "kind": "client_original",
+      "source_attachment": "Screenshot 2026-10-25 at 15.36.12.png",
+      "sha256": "a27e335fcae4d1b0acc21f7bba44444e8564810e60a4fe7854fd6c510fe7e914",
+      "original_attachment_sha256": "a27e335fcae4d1b0acc21f7bba44444e8564810e60a4fe7854fd6c510fe7e914",
+      "dimensions": [
+        1334,
+        616
+      ]
+    },
+    {
+      "file": "images/originals/review-fornecido.png",
+      "kind": "client_original",
+      "source_attachment": "Screenshot 2026-10-25 at 15.37.33.png",
+      "sha256": "cd263eb0c6260ce6e932a8adfa7ef680131490cc852b1d1ef8384d51e8e25b41",
+      "original_attachment_sha256": "cd263eb0c6260ce6e932a8adfa7ef680131490cc852b1d1ef8384d51e8e25b41",
+      "dimensions": [
+        1712,
+        1712
+      ]
+    },
+    {
+      "file": "images/master/hero-pie-hand.png",
+      "kind": "generated_master",
+      "sha256": "07b6c306a774fee37ba5e00dea501136881be837f8f053c0537ae3d44f01dbbd",
+      "dimensions": [
+        1214,
+        1295
+      ]
+    },
+    {
+      "file": "images/master/paper.png",
+      "kind": "generated_master",
+      "sha256": "04d5e7b0ef2606b262ed0ebeeb6958e5775639c3ecd9e32cacd5a39399f43649",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "images/master/inside-pie.png",
+      "kind": "generated_master",
+      "sha256": "1c298a3081a5ddc3f3671d3e5a84e074ea8bcff70ee991cfee72a85f3c853bec",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "site/assets/inside-pie.webp",
+      "kind": "web_derivative_of_generated_master",
+      "sha256": "56bd9416be821b8113a01bee2f6ff03e5bad74151ebcf7e33f02ac711de97adf",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "site/assets/paper.webp",
+      "kind": "web_derivative_of_generated_master",
+      "sha256": "ba134465c82e7f624716453000281d905f997270e754516ebbf9e422ea26a70a",
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "site/assets/hero-pie-hand.webp",
+      "kind": "web_derivative_of_generated_master",
+      "sha256": "ffcf1a68e2962816179bef97a59759886c620c60f54e4f77289c246dbb7bfe2f",
+      "dimensions": [
+        1214,
+        1295
+      ]
+    },
+    {
+      "file": "brand/Logo-Mals-Bakery-Transparente.png",
+      "kind": "generated_brand_asset",
+      "sha256": "571a6e9d5b480ffd8bcee72eb32c079f23e36f2ccacb0d041020cf00e11cb0da",
+      "dimensions": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "notes": "Real photos are unchanged. Master campaign PNGs are original ImageGen outputs. WebP conversion preserves foreground alpha. Public website does not depend on the presentation film."
+}

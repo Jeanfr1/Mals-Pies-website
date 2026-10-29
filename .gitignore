@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.DS_Store
+.vercel/
+scripts/out/
+qa-captures/
+# Captures with third-party people, other brands or a reviewer's name stay local
+site/assets/fachada-original.png
+images/originals/review-fornecido.png
+images/originals/instagram-informacoes.png
+references/conceito-do-cliente.jpg
